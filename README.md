@@ -40,6 +40,8 @@ This project is intended for **educational and research purposes** to demonstrat
    - Name (from form input)  
    - Mobile number (from form input)  
 
+![Wi-Fi Scan](./images/wifi_scan.jpeg)
+
 ---
 
 ## 💻 Usage
@@ -47,11 +49,17 @@ This project is intended for **educational and research purposes** to demonstrat
 2. After boot, the ESP32 will:
    - Automatically scan and clone the **strongest nearby Wi-Fi SSID**, OR  
    - Use a custom SSID if set via serial commands.  
+
+![Captive Portal](./images/captive.jpeg)
+
 3. Connect to the cloned SSID (open network).  
-4. Open any webpage — you will be redirected to `192.168.4.1/login`.  
-5. To access the **admin panel** for logs and settings, navigate to `192.168.4.1/admin`:  
+4. Open any webpage — you will be redirected to `/login`.  
+5. To access the **admin panel** for logs and settings, navigate to `/admin`:  
    - **Username:** `admin`  
    - **Password:** `scamaware`  
+
+![Admin Panel](./images/admin.jpeg)
+
 6. Admin panel features:
    - View captured logs (MAC, name, phone)  
    - Clear stored data  
@@ -74,3 +82,4 @@ This project is intended for **educational and research purposes** to demonstrat
 - Add optional real bandwidth delivery feature  
 
 ---
+
