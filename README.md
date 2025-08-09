@@ -53,6 +53,3 @@ This project is intended for **educational and research purposes** to demonstrat
 - Add optional real bandwidth delivery feature  
 
 ---
-
-**Repo Description (for GitHub “About” section):**  
-> Educational ESP32 captive portal that clones Wi-Fi networks, displays a fake free-bandwidth page, and logs MAC addresses, names, and phone numbers for analysis.
