@@ -27,15 +27,36 @@ This project is intended for **educational and research purposes** to demonstrat
 ---
 
 ## 📂 How It Works
-1. ESP32 clones a target Wi-Fi SSID as an **open network**.  
-2. When a user connects, all traffic is redirected to the **captive portal page**.  
-3. The portal displays a **"Free Bandwidth"** offer form requesting:
+1. ESP32 clones a target Wi-Fi SSID from:
+   - The **strongest available nearby network**, or  
+   - A **custom SSID set via serial commands**.  
+2. Creates an **open network** with the cloned SSID.  
+3. When a user connects, they are redirected to `/login` — the captive portal page.  
+4. The portal displays a **"Free Bandwidth"** offer form requesting:
    - Name  
    - Mobile number  
-4. Upon submission, the ESP32 logs:
+5. Upon submission, the ESP32 logs:
    - MAC address (from connection request)  
    - Name (from form input)  
    - Mobile number (from form input)  
+
+---
+
+## 💻 Usage
+1. **Flash the firmware** to your ESP32 using PlatformIO or Arduino IDE.  
+2. After boot, the ESP32 will:
+   - Automatically scan and clone the **strongest nearby Wi-Fi SSID**, OR  
+   - Use a custom SSID if set via serial commands.  
+3. Connect to the cloned SSID (open network).  
+4. Open any webpage — you will be redirected to `192.168.4.1/login`.  
+5. To access the **admin panel** for logs and settings, navigate to `192.168.4.1/admin`:  
+   - **Username:** `admin`  
+   - **Password:** `scamaware`  
+6. Admin panel features:
+   - View captured logs (MAC, name, phone)  
+   - Clear stored data  
+   - Change SSID target via serial or UI  
+7. To stop the portal, simply power down the ESP32.
 
 ---
 
